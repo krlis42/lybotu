@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>轮播图</title>
+        <style>
+            .kr-slide {
+                position: relative;
+                width: 800px;
+                height: 450px;
+            }
+            .kr-slide-image {
+                display: none;
+            }
+            .kr-slide-image-active {
+                display: inline-block;
+            }
+            .kr-slide-button {
+                width: 30px;
+                height: 50px;
+                color: #fff;
+                background: red;
+                opacity: 0.5;
+                border: 0;
+                outline: 0;
+                border-radius: 2px;
+            }
+            .kr-slide-button:hover {
+                cursor: pointer;
+            }
+            .kr-left {
+                left: 0;
+            }
+            .kr-right {
+                right: 0;
+            }
+            .kr-vertical-center {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .kr-slide-dots {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 10px;
+            }
+            .kr-slide-dot {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin: 0 2px;
+                border-radius: 50%;
+                background: red;
+            }
+            .kr-slide-dot:hover {
+                cursor: pointer;
+            }
+            .kr-dot-active {
+                background: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="kr-slide" data-imgs="4" data-active="0">
+            <div class="kr-slide-images">
+                <img id="id-krimage-0" class="kr-slide-image kr-slide-image-active" src="slideimages/1.jpg" alt="towers">
+                <img id="id-krimage-1" class="kr-slide-image" src="slideimages/2.jpg" alt="stables">
+                <img id="id-krimage-2" class="kr-slide-image" src="slideimages/3.jpg" alt="Shrines">
+                <img id="id-krimage-3" class="kr-slide-image" src="slideimages/4.jpg" alt="Villages">
+            </div>
+            <div class="kr-slide-buttons">
+                <button class="kr-slide-button kr-left kr-vertical-center"
+                    data-offset="-1">&lt;</button>
+                <button class="kr-slide-button kr-right kr-vertical-center"
+                    data-offset="1">&gt;</button>
+            </div>
+            <div class="kr-slide-dots">
+                <div id="id-dot-0" class="kr-slide-dot kr-dot-active" data-index="0"></div>
+                <div id="id-dot-1" class="kr-slide-dot" data-index="1"></div>
+                <div id="id-dot-2" class="kr-slide-dot" data-index="2"></div>
+                <div id="id-dot-3" class="kr-slide-dot" data-index="3"></div>
+            </div>
+        </div>
+        <script src="common.js"></script>
+        <script src="lybo.js"></script>
+    </body>
+</html>
